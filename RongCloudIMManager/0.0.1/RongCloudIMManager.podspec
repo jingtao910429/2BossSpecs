@@ -121,6 +121,8 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation'
   s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
   s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
+  s.resources = "Source/RongCloudIM/*.plist", "Source/RongCloudIM/*.lproj"
+  s.vendored_libraries = 'Source/RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -136,5 +138,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
-  # s.dependency 'RxWebClient'
+  s.dependency 'RxWebClient'
 end
