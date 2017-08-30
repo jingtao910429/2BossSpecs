@@ -138,5 +138,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
-  s.dependency 'RxWebClient'
+  #s.dependency 'RxWebClient'
 end
