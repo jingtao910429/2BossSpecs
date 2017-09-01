@@ -139,7 +139,7 @@ Pod::Spec.new do |s|
 
 
   # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
-  # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
+  s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
   # s.dependency 'Moya'
   # s.dependency 'RxSwift'
   # s.dependency 'ObjectMapper'
