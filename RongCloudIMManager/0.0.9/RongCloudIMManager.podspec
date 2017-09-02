@@ -121,13 +121,13 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
-  # s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
-  # s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
-  # s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
-  # s.vendored_libraries = 'RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
+  s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
+  s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
+  s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
+  s.vendored_libraries = 'RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
 
   # s.library   = "iconv"
-  # s.libraries = "sqlite3.0", "c++", "xml2", "stdc++", "z"
+  s.libraries = "sqlite3.0", "c++", "xml2", "stdc++", "z"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -137,11 +137,11 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-  # s.xcconfig       = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Headers/Public/RongCloudIMManager" }
+  s.xcconfig       = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Headers/Public/RongCloudIMManager" }
   # s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
 
   # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
-  s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
+  # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
   # s.dependency 'Moya'
   # s.dependency 'RxSwift'
   # s.dependency 'ObjectMapper'
