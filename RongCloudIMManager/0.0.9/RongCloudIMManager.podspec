@@ -122,8 +122,8 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
   s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
-  s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
-  s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
+  # s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
+  # s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
   s.vendored_libraries = 'RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
 
   # s.library   = "iconv"
