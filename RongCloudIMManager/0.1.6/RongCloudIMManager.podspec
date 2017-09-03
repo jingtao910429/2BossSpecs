@@ -138,7 +138,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   # s.xcconfig       = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Headers/Public/RongCloudIMManager" }
-  # s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
+  s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
 
   # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
   # s.dependency 'RongCloudIMLibrary', '~>0.0.1'
