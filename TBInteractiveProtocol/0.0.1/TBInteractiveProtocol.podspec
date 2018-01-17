@@ -25,29 +25,11 @@ Pod::Spec.new do |s|
     subspec.source_files = "Source/TBInteractiveProtocol/*.{swift}"
     subspec.dependency 'TBInteractiveProtocol/Helper'
     subspec.dependency 'TBInteractiveProtocol/ProgressView'
-    subspec.dependency 'TBInteractiveProtocol/Handlers/EvaluateJSHandlers'
+    subspec.dependency 'TBInteractiveProtocol/Handlers'
   end
 
   s.subspec 'Handlers' do |subspec|
-
-    subspec.subspec 'Core' do |subspecCore|
-      subspecCore.source_files = "Source/TBInteractiveProtocol/Handlers/*.{swift}"
-    end
-
-    subspec.subspec 'RegisterHandlers' do |subspecSubRegister|
-      subspecSubRegister.source_files = "Source/TBInteractiveProtocol/Handlers/RegisterHandlers/*.{swift}"
-      subspecSubRegister.dependency 'TBInteractiveProtocol/Handlers/Core'
-    end
-
-    subspec.subspec 'CallHandlers' do |subspecSubCall|
-      subspecSubCall.source_files = "Source/TBInteractiveProtocol/Handlers/CallHandlers/*.{swift}"
-      subspecSubCall.dependency 'TBInteractiveProtocol/Handlers/Core'
-    end
-
-    subspec.subspec 'EvaluateJSHandlers' do |subspecSubEvaluate|
-      subspecSubEvaluate.source_files = "Source/TBInteractiveProtocol/Handlers/EvaluateJSHandlers/*.{swift}"
-      subspecSubEvaluate.dependency 'TBInteractiveProtocol/Handlers/Core'
-    end
+    subspec.source_files = "Source/TBInteractiveProtocol/Handlers/*.{swift}", "Source/TBInteractiveProtocol/Handlers/**/*.{swift}"
   end
 
   s.subspec 'Helper' do |subspec|
@@ -69,16 +51,8 @@ Pod::Spec.new do |s|
     end
 
     subspec.subspec 'Plugins' do |subspecSubPlugin|
-
-      subspecSubPlugin.subspec 'RegisterHandlerPlugins' do |subspecSubRegister|
-        subspecSubRegister.source_files = "Source/TBInteractiveProtocol/WeakBusiness/Plugins/RegisterHandlerPlugins/*.{swift}"
-        subspecSubRegister.dependency 'TBInteractiveProtocol/WeakBusiness/Models'
-      end
-
-      subspecSubPlugin.subspec 'CallHandlerPlugins' do |subspecSubCall|
-        subspecSubCall.source_files = "Source/TBInteractiveProtocol/WeakBusiness/Plugins/CallHandlerPlugins/*.{swift}"
-        subspecSubCall.dependency 'TBInteractiveProtocol/WeakBusiness/Plugins/RegisterHandlerPlugins'
-      end
+      subspecSubPlugin.source_files = "Source/TBInteractiveProtocol/WeakBusiness/Plugins/**/*.{swift}"
+      subspecSubPlugin.dependency 'TBInteractiveProtocol/WeakBusiness/Models'
     end
 
   end
