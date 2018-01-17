@@ -22,9 +22,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'Core' do |subspec|
-    subspec.source_files = "Source/TBInteractiveProtocol/*.{swift}"
-    subspec.dependency 'TBInteractiveProtocol/Helper'
-    subspec.dependency 'TBInteractiveProtocol/ProgressView'
+    subspec.source_files = "Source/TBInteractiveProtocol/*.{swift}", "Source/TBInteractiveProtocol/Helper/*.{swift}", "Source/TBInteractiveProtocol/ProgressView/*.{swift}"
     subspec.dependency 'TBInteractiveProtocol/Handlers'
   end
 
@@ -32,19 +30,10 @@ Pod::Spec.new do |s|
     subspec.source_files = "Source/TBInteractiveProtocol/Handlers/*.{swift}", "Source/TBInteractiveProtocol/Handlers/**/*.{swift}"
   end
 
-  s.subspec 'Helper' do |subspec|
-    subspec.source_files = "Source/TBInteractiveProtocol/Helper/*.{swift}"
-  end
-
-  s.subspec 'ProgressView' do |subspec|
-    subspec.source_files = "Source/TBInteractiveProtocol/ProgressView/*.{swift}"
-  end
-
   s.subspec 'WeakBusiness' do |subspec|
 
     subspec.dependency 'TBInteractiveProtocol/Handlers'
     subspec.dependency 'TBInteractiveProtocol/Core'
-    subspec.dependency 'TBInteractiveProtocol/Helper'
 
     subspec.subspec 'Models' do |subspecSubModel|
       subspecSubModel.source_files = "Source/TBInteractiveProtocol/WeakBusiness/Models/*.{swift}"
