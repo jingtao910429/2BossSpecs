@@ -18,8 +18,7 @@ Pod::Spec.new do |s|
   "WebKit", 
   "UIKit", 
   "CoreLocation"
-  
-  s.default_subspecs = 'Core'
+
   s.requires_arc = true
 
   s.subspec 'Core' do |subspec|
