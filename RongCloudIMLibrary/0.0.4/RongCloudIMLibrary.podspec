@@ -11,10 +11,11 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/jingtao910429/RongCloudIMLibrary.git"
   s.license      = "MIT"
-  s.author             = "http://ta.2boss.cn"
+  s.author       = "http://ta.2boss.cn"
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMLibrary.git"}
-  s.source_files  = "Source/*.{h}","RongCloudIM/RongIMLib.framework/Headers/*.{h}", "RongCloudIM/RongIMKit.framework/*.{h}"
+  s.public_header_files = "RongCloudIM/RongIMLib.framework/Headers/*.{h}", "RongCloudIM/RongIMKit.framework/Headers/*.{h}"
+  s.source_files  = "Source/*.{h}","RongCloudIM/RongIMLib.framework/Headers/*.{h}", "RongCloudIM/RongIMKit.framework/Headers/*.{h}"
   s.frameworks          = "Foundation"
   s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
   s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
