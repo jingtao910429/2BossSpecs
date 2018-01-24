@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
 
   s.frameworks   = "Foundation"
   s.source_files = "Source/*.{h}"
-  s.source_files = "RongCloudIM/RongIMLib.framework/Headers/*.{h}", "RongCloudIM/RongIMKit.framework/Headers/*.{h}"
   s.vendored_frameworks = ["RongCloudIM/RongIMLib.framework", "RongCloudIM/RongIMKit.framework"]
   s.vendored_libraries = "RongCloudIM/libopencore-amrnb.a"
   s.resources = [
