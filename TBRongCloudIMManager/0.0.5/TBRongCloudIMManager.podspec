@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMManager.git"}
   
-  s.source_files = "Source/Test.h","Source/Test.m"
+  s.source_files = "Source/*.{h,m}"
   s.dependency 'RongCloudIM/IMKit', '2.8.26'
   s.static_framework = true
   
