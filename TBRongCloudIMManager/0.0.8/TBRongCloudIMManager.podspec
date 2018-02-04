@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "Source/**/*.{h,m}"
 
-  s.dependency 'RongCloudIMLibrary', '0.1.1'
+  s.dependency 'RongCloudIMLibrary', '0.1.2'
 
   s.static_framework = true
   
